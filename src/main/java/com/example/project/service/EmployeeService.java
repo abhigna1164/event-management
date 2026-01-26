@@ -5,13 +5,13 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.example.project.model.Employee;
-import com.example.project.repository.EmployeeRepository;
+import com.example.project.repository.EmployeeJpaRepository;
 
 @Service
 public class EmployeeService {
-    private final EmployeeRepository employeeRepository;
+    private final EmployeeJpaRepository employeeRepository;
 
-    public EmployeeService(EmployeeRepository employeeRepository) {
+    public EmployeeService(EmployeeJpaRepository employeeRepository) {
         this.employeeRepository = employeeRepository;
     }
      // Create / Save Employee

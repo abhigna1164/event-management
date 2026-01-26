@@ -8,16 +8,16 @@ import org.springframework.stereotype.Service;
 import com.example.project.model.Feedback;
 import com.example.project.model.Registration;
 import com.example.project.model.RegistrationStatus;
-import com.example.project.repository.FeedbackRepository;
+import com.example.project.repository.FeedbackJpaRepository;
 import com.example.project.repository.RegistrationJpaRepository;
 
 @Service
 public class FeedbackService {
 
-    private final FeedbackRepository feedbackRepository;
+    private final FeedbackJpaRepository feedbackRepository;
     private final RegistrationJpaRepository registrationJpaRepository;
 
-    public FeedbackService(FeedbackRepository feedbackRepository, RegistrationJpaRepository registrationJpaRepository) {
+    public FeedbackService(FeedbackJpaRepository feedbackRepository, RegistrationJpaRepository registrationJpaRepository) {
         this.feedbackRepository = feedbackRepository;
         this.registrationJpaRepository = registrationJpaRepository;
     }

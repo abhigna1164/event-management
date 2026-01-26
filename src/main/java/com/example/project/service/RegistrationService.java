@@ -1,22 +1,26 @@
 package com.example.project.service;
 
-import com.example.project.model.*;
-import com.example.project.repository.EmployeeRepository;
-import com.example.project.repository.EventRepository;
-import com.example.project.repository.RegistrationJpaRepository;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.example.project.model.Employee;
+import com.example.project.model.Event;
+import com.example.project.model.Registration;
+import com.example.project.model.RegistrationStatus;
+import com.example.project.repository.EmployeeJpaRepository;
+import com.example.project.repository.EventRepository;
+import com.example.project.repository.RegistrationJpaRepository;
 
 @Service
 public class RegistrationService {
 
     private final RegistrationJpaRepository registrationJpaRepo;
-    private final EmployeeRepository employeeRepo;
+    private final EmployeeJpaRepository employeeRepo;
     private final EventRepository eventRepo;
 
     public RegistrationService(RegistrationJpaRepository registrationJpaRepo,
-                               EmployeeRepository employeeRepo,
+                               EmployeeJpaRepository employeeRepo,
                                EventRepository eventRepo) {
         this.registrationJpaRepo = registrationJpaRepo;
         this.employeeRepo = employeeRepo;
